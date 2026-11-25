@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DigiBot - Digital Marketing Assistant</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+      <div class="brand-mark">✦</div>
+
+      <div>
+        <div class="brand-name">DigiBot</div>
+        <div class="brand-sub">MARKETING AI</div>
+      </div>
+    </div>
+
+    <button class="new-chat-btn" id="newChatBtn">
+      ＋ New Chat
+    </button>
+
+    <div class="nav-label">WORKSPACE</div>
+
+    <nav class="nav-list">
+
+      <button class="nav-item active" data-topic="Dashboard">
+        ⌂ Dashboard
+      </button>
+
+      <button class="nav-item" data-topic="SEO">
+        ⌕ SEO
+      </button>
+
+      <button class="nav-item" data-topic="Social Media Marketing">
+        ◎ Social Media Marketing
+      </button>
+
+      <button class="nav-item" data-topic="Content Marketing">
+        ▤ Content Marketing
+      </button>
+
+      <button class="nav-item" data-topic="Email Marketing">
+        ✉ Email Marketing
+      </button>
+
+      <button class="nav-item" data-topic="Google Ads">
+        ◈ Google Ads
+      </button>
+
+      <button class="nav-item" data-topic="Meta Ads">
+        ◉ Meta Ads
+      </button>
+
+      <button class="nav-item" data-topic="Keyword Research">
+        ⌗ Keyword Research
+      </button>
+
+      <button class="nav-item" data-topic="Marketing Analytics">
+        ▥ Marketing Analytics
+      </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+      <button class="clear-btn" id="clearChatBtn">
+        ⌫ Clear Conversation
+      </button>
+
+      <div class="profile">
+        <div class="avatar">D</div>
+
+        <div class="profile-info">
+          <strong>DigiBot Assistant</strong>
+          <small>Powered by Groq</small>
+        </div>
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- Main Chat -->
+  <main class="main-panel">
+
+    <header class="topbar">
+
+      <button id="menuBtn" class="mobile-menu">
+        ☰
+      </button>
+
+      <div class="top-title">
+        <span class="status-dot"></span>
+        AI Marketing Assistant
+      </div>
+
+      <button id="topClearBtn" class="top-clear">
+        ↺
+      </button>
+
+    </header>
+
+    <!-- Chat Area -->
+    <section class="chat-area" id="chatArea">
+
+      <!-- Welcome -->
+      <div class="welcome" id="welcome">
+
+        <div class="hero-icon">✦</div>
+
+        <h1>
+          Marketing ideas,<br>
+          <span>made smarter.</span>
+        </h1>
+
+        <p class="welcome-desc">
+          Hi! I'm DigiBot. Let's turn your marketing questions
+          into clear ideas and actionable strategies.
+        </p>
+
+        <!-- Suggested Prompts -->
+        <div class="prompt-grid">
+
+          <button class="prompt-card"
+            data-prompt="Create a 7-day Instagram content calendar for a clothing brand.">
+            <strong>Plan my content</strong>
+            <small>Build a weekly content calendar</small>
+          </button>
+
+          <button class="prompt-card"
+            data-prompt="Give me 10 beginner-friendly SEO tips for my website.">
+            <strong>Improve my SEO</strong>
+            <small>Get practical search tips</small>
+          </button>
+
+          <button class="prompt-card"
+            data-prompt="Write Instagram captions and hashtags for a product launch.">
+            <strong>Create social posts</strong>
+            <small>Captions and hashtags</small>
+          </button>
+
+          <button class="prompt-card"
+            data-prompt="Explain CTR, CPC, CPM, ROI and ROAS with examples.">
+            <strong>Understand analytics</strong>
+            <small>Learn marketing metrics</small>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="messages" id="messages"></div>
+
+    </section>
+
+    <!-- Input -->
+    <footer class="composer-wrap">
+
+      <form class="composer" id="chatForm">
+
+        <textarea
+          id="messageInput"
+          placeholder="Ask DigiBot anything about digital marketing..."
+          rows="1"
+        ></textarea>
+
+        <button type="submit" class="send-btn" id="sendBtn">
+          ↑
+        </button>
+
+      </form>
+
+      <div class="composer-note">
+        DigiBot can make mistakes. Verify important marketing information.
+      </div>
+
+    </footer>
+
+  </main>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Markdown parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- HTML security sanitizer -->
+<script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+<!-- DigiBot JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
